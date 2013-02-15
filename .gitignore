@@ -1,10 +1,23 @@
+# By running a tex, latex, pdflatex or what ever there will be files which are
+# made by the fly and no human needs them (like *.toc or *.aux)
+
 *.aux
 *.log
 *.toc
 *.out
+
+# i don't know these filetyped but obviously someone ment that hey do not 
+# belong to our repository either
+
 *.tmp
 *.bak
 
+# kicad make a cache for open files like for libraries like mylib-cache.lib
+# however, they don't belong into our repository 
+
 *cache.lib
+
+# There is a folder for the HW-Development which includes (typically) a large
+# amount of datahseets in PDF. So we just cut out all of them...
 
 datasheets/
