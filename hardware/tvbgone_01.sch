@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Fre 15 Feb 2013 13:46:07 CET
+EESchema Schematic File Version 2  date Fre 15 Feb 2013 13:49:50 CET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,7 @@ encoding utf-8
 Sheet 1 1
 Title "TV-B-Gone"
 Date "14 feb 2013"
-Rev "A"
+Rev "dev"
 Comp "LuXeria"
 Comment1 ""
 Comment2 ""
