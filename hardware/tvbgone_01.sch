@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 14.02.2013 23:32:06
+EESchema Schematic File Version 2  date Fre 15 Feb 2013 13:46:07 CET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,15 +29,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-EELAYER 43  0
+EELAYER 25  0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A3 16535 11700
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "TV-B-Gone"
 Date "14 feb 2013"
-Rev ""
-Comp ""
+Rev "A"
+Comp "LuXeria"
 Comment1 ""
 Comment2 ""
 Comment3 ""
