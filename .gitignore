@@ -4,4 +4,7 @@
 *.out
 *.tmp
 *.bak
+
+*cache.lib
+
 datasheets/
