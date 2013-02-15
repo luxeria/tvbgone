@@ -11,6 +11,7 @@
 
 *.tmp
 *.bak
+tvbgone.pdf
 
 # kicad makes a cache for open files like for libraries like mylib-cache.lib
 # however, they don't belong into our repository 
