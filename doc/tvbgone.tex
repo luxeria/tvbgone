@@ -34,12 +34,36 @@
 \tableofcontents
 \newpage
 
-\tableofcontents
-
+\include{codeconvention}
 % \include{requirements}
 % \include{circuit}
 % \include{layout}
 % \include{bom}
+
+\begin{appendix}
+    \clearpage
+    \pagenumbering{roman}
+    \newpage
+
+    \section{Linux Kernel Coding Style}
+    Link zum ganzen Dokument 
+    \href{https://computing.llnl.gov/linux/slurm/coding_style.pdf}{
+        Linux Kernel Coding Style}
+    \begin{figure}[h!]
+    \includegraphics[page=1, width=1\textwidth]{kernelstyle.pdf}
+    \end{figure}
+    \newpage
+
+    \section{GNU Coding Standards}
+    Link zum ganen Dokument
+    \href{http://www.gnu.org/prep/standards/}{GNU Coding Standards}
+    \begin{figure}[h!]
+    \includegraphics[page=5, width=1\textwidth]{gnustandard.pdf}
+    \end{figure}
+
+\end{appendix}
+
+
 
 \end{document}
 
