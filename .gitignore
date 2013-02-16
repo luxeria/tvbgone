@@ -13,6 +13,10 @@
 *.bak
 tvbgone.pdf
 
+# some additional pdfs that don't belogn in the repository
+kernelstyle.pdf
+gnustandard.pdf
+
 # kicad makes a cache for open files like for libraries like mylib-cache.lib
 # however, they don't belong into our repository 
 
