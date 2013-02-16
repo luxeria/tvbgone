@@ -20,10 +20,15 @@ Hersteller , die über eine Infrarotschnittstelle verfügen ausgeschaltet
 werden können. Dabei sollen folgende Anforderungen erfüllt werden: 
 
 \begin{table}[h!]
-  \begin{tabular}{lll}
-    \textbf{Anforderung}          & \textbf{Pflicht} & \textbf{Wunsch}\\
-    tbd&X&
+  \begin{tabular}{@{}p{0.3\textwidth}p{0.2\textwidth}p{0.2\textwidth}}
+    \rowcolor{white} \textbf{Anforderung}     & \textbf{Pflicht} & \textbf{Wunsch}\\
+                                              &                  &                \\
+    \rowcolor{white} Speisung                 & 3V Lithium Zelle &                \\
+    \rowcolor{lgray} Protokolle               & RC-5             &                \\
+    \rowcolor{lgray}                          &                  & Revox          \\
+    \rowcolor{white} Stromverbrauch Stand-by  & $\leq$100$\mu$A  & $\leq$10$\mu$A \\
+    \rowcolor{lgray} Stromverbrauch Betrieb   & $\leq$50mA       & $\leq$20mA     \\
   \end{tabular}
-  \caption{RC5 Systemadressen}
-  \label{tab:rc5_systemadressen}
+%   \caption{Anforderungen}
+  \label{tab:anforderungen}
 \end{table}
