@@ -1,3 +1,19 @@
+% coding:utf-8
+
+%TV-B-Gone
+%Copyright (C) 2013, Daniel Winz, Ervin Mazlagic
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
 \section{RC5}
 Im Folgenden sollen alle wichtigen Facts zu und über RC5 gegeben werden.
 
@@ -31,18 +47,32 @@ und dann das sogenannte Field-Bit. Das Startbit ist immer logisch 1 und
 stellt beim Empfänger die Verstärkung ein zum einlesen der Daten.
 Das Field-Bit wird verwendet um dem Empfänger mitzuteilen, ob man den
 unteren (0-63) oder oberen (64-127) Kommandobereich verwendet.
+
 \subsubsection{Toggle-Bit}
 Das Toggle- oder auch Steuer-Bit wird dazu verwendet permanentes (bzw. 
 wiederholendes) senden von neuem Senden zu unterscheiden.
 Dies ist nützlich um z.b. zu erkennen ob eine Taste dauerhaft gedrückt ist
 bei der Fernbedienung etc.
+
 \subsubsection{Systemadress-Bits}
 Die 5 Systemadress-Bits erlauben es zwischen 32 verschiedenen Geräten
 zu operieren.
+
 \subsubsection{Kommando-Bits}
 Die 6 Kommando-Bits bieten ein Set von 64 Befehlen an, mit welchem ein
 Gerät (welches mit den 5 Systemadress-Bits spezifiziert wurde) angesteuert
 werden kann.
+
+\subsubsection{Modulation}
+Die Übertragung der einzelnen Bits erfolgt moduliert. Dabei wird bei aktivem
+Signal eine Pulsfolge übertragen. Die Pulsdauer beträgt dabei 6.944$\mu$s. 
+Dieser Puls wird für jedes Bit 32 mal übertragen. Die Pausenzeit zwischen den Pulsen beträgt 20.833$\mu$s. Dies ergibt eine Periodendauer von 27.777$\mu$s, was einer Frequenz von 36kHz entspricht. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{rc5_modul.pdf}
+    \label{pic:rc5_modul}
+    \caption{RC5 Modulation}
+\end{figure}
 
 \subsection{System-Adressen}
 
