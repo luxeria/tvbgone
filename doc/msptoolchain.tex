@@ -92,7 +92,25 @@ Operatin System & GNU/Linux\\
 
 \section{MSP430-Toolchain (unter Windows)}
 \subsection{Installation}
+Diese Anleitung befasst sich nur mit mspgcc. Entwicklungsumgebungen wie Eclipse 
+werden nicht behandelt. 
+\subsubsection{Download}
 Die Installation ist unter Windows etwas umständlicher als unter Linux. 
+Zunächst muss der mspgcc (\url{http://sourceforge.net/projects/mspgcc/files/
+Windows/mingw32/}) und der msp430-gdbproxy (\url{http://sourceforge.net/
+projects/mspgcc/files/Outdated/msp430-gdbproxy/2006-11-14/}) heruntergeladen 
+werden. 
+
+Aktueller als msp430-gdbproxy ist die Installation von MSPdebug. Dies wird an 
+dieser Stelle zu einem späteren Zeitpunkt erläutert. 
+
+Ausserdem müssen noch die beiden DLLs MSP430.dll und HIL.dll heruntergeladen 
+werden. Diese findet man unter \url{http://software-dl.ti.com/msp430/
+msp430_public_sw/mcu/msp430/DLLv2/latest/index_FDS.html}. Um diese jedoch 
+herunterladen zu können muss man bei Texas Instruments registriert sein. Eine 
+andere Möglichkeit um an die fehlenden DLLs zu gelangen ist die Installation 
+der Kickstartversion von IAR Embedded Workbench von \url{http://processors.
+wiki.ti.com/index.php/IAR_Embedded_Workbench_for_TI_MSP430}. 
 
 % Die Installation der MSP-430 Toolchain ist unter Ubuntu bereits in den 
 % Paketquellen vorhanden (ab Oneric Ocelot aka 11.10)
