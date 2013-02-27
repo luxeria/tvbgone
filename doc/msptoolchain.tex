@@ -1,3 +1,19 @@
+% coding:utf-8
+
+%TV-B-Gone
+%Copyright (C) 2013, Daniel Winz, Ervin Mazlagic
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
 \section{MSP430-Toolchain (unter Linux)}
 \subsection{Installation}
 Die Installation der MSP-430 Toolchain ist unter Ubuntu bereits in den 
@@ -73,3 +89,83 @@ Machine         & i686 \\
 Operatin System & GNU/Linux\\
 \end{tabular}
 \end{table}
+
+\section{MSP430-Toolchain (unter Windows)}
+\subsection{Installation}
+Die Installation ist unter Windows etwas umständlicher als unter Linux. 
+
+% Die Installation der MSP-430 Toolchain ist unter Ubuntu bereits in den 
+% Paketquellen vorhanden (ab Oneric Ocelot aka 11.10)
+
+% \begin{itemize}
+%     \item binutils-msp430 
+%     \item gcc-msp430 
+%     \item gdb-msp430 
+%     \item msp430-libc 
+%     \item msp430mcu 
+%     \item mspdebug
+% \end{itemize}
+
+% \noindent
+% Da hier Pakete verwendet werden, die Manipulationen am GDB vornehmen gilt es
+% folgende Eingabe zu machen, falls man GDB bereits intalliert hat \\
+
+% \verb?apt-get -o Dpkg::Options::="--force-overwrite" install gdb-msp430?
+
+% \subsection{Kompilation}
+% Die Kompilation erfolgt durch \emph{msp430-gcc} und als Option wird der MCU Typ
+% angegeben (beim MSP430 LaunchPad ist dies \emph{-mmcu=msp430g2553}). Die weiteren
+% Angaben sind analog zum GCC, d.h. \emph{-o Output-File ./Input-File.c}.
+% Hier nochmal ein Beispiel \\
+
+% \verb?msp430-gcc -mmcu=msp430g2553 -o myprog ./myprog.c?
+
+% \subsection{Auf Flash schreiben}
+% Das Programm wird mittels des MSP-Debugger auf das Flash übertragen. Hierzu
+% ruft man \emph{mspdebug} und gibt den Treiber an (im Falle des LaunchPad ist
+% dies der \emph{rf2500}).\\
+
+% \verb?mspdebug rf2500?\\
+
+% \noindent
+% Dies eröffnet die Konsole und stellt so viele Kommandos bereit. Um ein 
+% Übertragen auf das LaunchPad zu ermöglichen, muss der Konsole zuerst das
+% betreffende Binary angegeben werden.\\
+
+% \verb?(mspdebug) prog myprog?\\
+
+% \noindent
+% Nachdem der Debugger das Binary kennt, schreibt er es sofort auf den Flash.
+% Damit das Programm ausgeführt wird, muss dem Debugger noch das Kommando 
+% \emph{run} übergeben werden.\\
+
+% \verb?(mspdebug) run?
+
+% \subsection{Debug \& Simulation}
+% \emph{mspdebug} bietet wie es der Name schon verrät Debug-Möglichkeiten.
+% Hierzu wird \emph{mspdebug} mit der Option \emph{sim} ausgeführt und
+% dann in dessen Konsole \emph{gdb} eingegeben.
+
+\subsection{Quellen \& Testing}
+Die hier angegebenen Informationen sind ein Auszug aus dem Artikel
+\href{http://springuin.nl/articles/launchpadwindows}{TI LaunchPad on Windows} von 
+Springuin. 
+
+% Die hier oben genannten Anleitungen sind mit folgender Konfiguration
+% erfolgreich gestestet worden an einem MSP-EXP430G2 LaunchPad Rev 1.5\footnote{
+%     Für Luxeria LuXeria-Member stehen mehrere MSP430-LaunchPads und eine
+%     EZ430-Chronos frei zur Verfügung im LuXlab.}:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l }
+Hardware        & HP ProBook 4740s \\
+Betriebssystem  & Windows 7 Professional 64 Bit \\
+                & Service Pack 1 \\
+% Kernel-Release  & 3.5.0-17-generic \\
+% Kernel-Version  & \#28-Ubuntu SMP Tue Oct 9 19:32:08 UTC 2012 \\
+% Machine         & i686 \\
+% Operatin System & GNU/Linux\\
+\end{tabular}
+\end{table}
+
