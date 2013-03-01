@@ -97,12 +97,8 @@ werden nicht behandelt.
 \subsubsection{Download}
 Die Installation ist unter Windows etwas umständlicher als unter Linux. 
 Zunächst muss der mspgcc \footnote{\url{http://sourceforge.net/projects/mspgcc/
-files/Windows/mingw32/}} und der msp430-gdbproxy \footnote{\url{http://
-sourceforge.net/projects/mspgcc/files/Outdated/msp430-gdbproxy/2006-11-14/}} 
-heruntergeladen werden. 
-
-Aktueller als msp430-gdbproxy ist die Installation von MSPdebug. Dies wird an 
-dieser Stelle zu einem späteren Zeitpunkt erläutert. 
+files/Windows/mingw32/}} und der mspdebug \footnote{\url{http://gnutoolchains
+.com/mspdebug/download/}} heruntergeladen werden. 
 
 Ausserdem müssen noch die beiden DLLs MSP430.dll und HIL.dll heruntergeladen 
 werden. Diese findet man unter \footnote{\url{http://software-dl.ti.com/msp430/
@@ -113,16 +109,33 @@ der Kickstartversion von IAR Embedded Workbench von \footnote{\url{http://
 processors.wiki.ti.com/index.php/IAR_Embedded_Workbench_for_TI_MSP430}}. Dazu 
 ist keine Anmeldung erforderlich. 
 
-Zudem wird der Treiber aus slac254 von \footnote{\url{?}} benötigt. 
+Zudem wird der Treiber von libusb-win32 \footnote{\url{http://sourceforge.net/
+projects/libusb-win32/files/}} benötigt. 
 
-\subsubsection{Installation Treiber}
-Als Erstes muss der Treiber für das Launchpad installiert werden. Dazu muss 
-slac524 entpackt werden. Anschliessend muss LaunchPad\_Driver.exe ausgeführt 
-werden. Unter Windows 7 muss LaunchPad\_Driver.exe als Administrator ausgeführt 
+\subsubsection{Installation mspgcc und mspdebug}
+Für die Installation von mspgcc muss das das heruntergeladene .zip File 
+nach C:\textbackslash mspgcc entpackt werden. Dieses Verzeichnis muss erstellt 
+werden, wenn mspgcc noch nie installiert wurde. Zudem müssen HIL.dll und 
+MSP430.dll in den Ordner C:\textbackslash mspgcc \textbackslash bin kopiert 
 werden. 
 
-Wenn nun das Launchpad angeschlossen wird, muss es im Gerätemanager als 
-serielle Schnittstelle angezeigt werden. 
+mspdebug fehlt noch!
+
+\subsubsection{Installation Treiber}
+Für mspdebug kann nicht der Treiber von Texas Instruments verwendet werden. 
+Dafür muss libusb entpackt werden. Anschliessend muss 
+bin\textbackslash inf-wizzard.exe ausgeführt werden. Bei der Device Selection
+muss dann das Launchpad ausgewählt werden. Das Launchpad hat die Vendor ID 
+0x0451 und die Product ID 0xf432. Dabei ist wichtig, dass das Debug-Interface
+ausgewählt wird und nicht die Application UART. Anschliessend kann das .inf 
+File an beliebiger Stelle gespeichert werden. Anschliessend kann mit Install 
+Now... der Treiber installiert werden. 
+
+% Wenn nun das Launchpad angeschlossen wird, muss es nach der Installation des 
+% Treibers im Gerätemanager als serielle Schnittstelle angezeigt werden. 
+
+
+
 
 
 % Die Installation der MSP-430 Toolchain ist unter Ubuntu bereits in den 
