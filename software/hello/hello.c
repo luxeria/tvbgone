@@ -5,13 +5,17 @@
 int main(void)
 {
         WDTCTL = WDTPW + WDTHOLD;           /* Stop watchdog timer */
-        P1DIR = 0x40;                       /* P1.6 output (green LED) */
-        P1OUT = 0;                          /* LED off */
+		DCOCTL    = CALDCO_16MHZ;           /* Initializes clock module */
+	    BCSCTL1   = XT2OFF|CALBC1_16MHZ;    
+	    BCSCTL2   = 0;           
+	    BCSCTL3   = 0;           
+        P1DIR = BIT0 | BIT6;                /* P1.6 output (green LED) */
+        P1OUT = BIT0;                       /* red LED */
 
         for (;;)                            /* Loop forever */
         {
                 volatile unsigned long i;
-                P1OUT ^= 0x40;              /* Toggle P1.6 output with XOR */
+                P1OUT ^= BIT0 | BIT6;       /* Toggle P1.0 and P1.6 output with XOR */
                 i = 99999;                  /* Delay */
 
                 do (i--);                   /* busy waiting (bad) */

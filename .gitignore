@@ -26,3 +26,7 @@ gnustandard.pdf
 # amount of datahseets in PDF. So we just cut out all of them...
 
 datasheets/
+
+# binaries for programming microcontrollers shoult not be in the repository. 
+
+*.elf
