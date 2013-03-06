@@ -1,0 +1,44 @@
+% coding:utf-8
+
+%TV-B-Gone
+%Copyright (C) 2013, Daniel Winz, Ervin Mazlagic
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\section{Einfaches Hello World}
+\begin{lstlisting}
+/* Example-Code from http://wiki.ubuntuusers.de/MSP430-Toolchain */
+
+#include  <msp430.h>
+
+int main(void)
+{
+        WDTCTL = WDTPW + WDTHOLD;           /* Stop watchdog timer */
+        DCOCTL    = CALDCO_16MHZ;           /* Initializes clock module */
+        BCSCTL1   = XT2OFF|CALBC1_16MHZ;    
+        BCSCTL2   = 0;           
+        BCSCTL3   = 0;           
+        P1DIR = BIT0 | BIT6;                /* P1.6 output (green LED) */
+        P1OUT = BIT0;                       /* red LED */
+
+        for (;;)                            /* Loop forever */
+        {
+                volatile unsigned long i;
+                P1OUT ^= BIT0 | BIT6;       /* Toggle P1.0 and P1.6 output with XOR */
+                i = 99999;                  /* Delay */
+
+                do (i--);                   /* busy waiting (bad) */
+                while (i != 0);
+        }
+}
+
+\end{lstlisting}
