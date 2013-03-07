@@ -5,10 +5,10 @@
 int main(void)
 {
         WDTCTL = WDTPW + WDTHOLD;           /* Stop watchdog timer */
-		DCOCTL    = CALDCO_16MHZ;           /* Initializes clock module */
-	    BCSCTL1   = XT2OFF|CALBC1_16MHZ;    
-	    BCSCTL2   = 0;           
-	    BCSCTL3   = 0;           
+        DCOCTL    = CALDCO_16MHZ;           /* Initializes clock module */
+        BCSCTL1   = XT2OFF|CALBC1_16MHZ;    
+        BCSCTL2   = 0;           
+        BCSCTL3   = 0;           
         P1DIR = BIT0 | BIT6;                /* P1.6 output (green LED) */
         P1OUT = BIT0;                       /* red LED */
 
