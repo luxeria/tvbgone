@@ -96,12 +96,12 @@ Unter Arch-Linux werden die nötigen Pakete nicht abgeboten in den Quellen.
 Jedoch können die Pakete selber erstellt werden aus den AUR.
 
 \subsubsection{System für Pakete aus AUR vorbereiten}
-Um Pakete aus AUR zu erstellen und installieren muss zuerst das Paket
+Um Pakete aus AUR zu erstellen und zu installieren muss zuerst das Paket
 \verb!base-devel! installiert werden. Falls noch nicht vorhanden muss auch
-makepkg installiert werden.
+\verb!makepkg! installiert werden.
 
 \subsubsection{Pakete erstellen}
-Um die Toolchain vollständig zu installieren müssen die folgenden Pakete aus
+Um die Toolchain vollständig zu installieren, müssen die folgenden Pakete aus
 den AUR heruntergeladen werden:
 \begin{itemize}
 	\item binutils-msp430
@@ -112,24 +112,24 @@ den AUR heruntergeladen werden:
 	\item mspdebug
 \end{itemize}
 Nach dem man alle benötigten Pakete heruntergeladen hat, kann man die 
-jeweiligen Tarbälle etrahieren mit \verb!tar xzf foo.tar.gz! (wobei foo
+jeweiligen tarballs extrahieren mit \verb!tar xzf foo.tar.gz! (wobei foo
 hier für den jeweiligen Paketnamen steht).
 
-Hat man dies an allen Tarbällen angewendet kann man in das jeweilige neu
+Hat man dies an allen tarballs angewendet, kann man in das jeweilige neu
 angelegte Verzeichnis der Pakete gehen und dort \verb!makepkg! ausführen.
 Noch besser ist es Abhängigkeiten automatisch zu lösen über pacman. Hierzu
-fügt man den Parameter \verb!-s! hinzu d.h. \verb!makepkg -s!.
+fügt man den Parameter \verb!-s! hinzu d.h. man führt \verb!makepkg -s! aus.
 
 Nun sollte man Ausschau halten nach READMEs zu den jeweiligen Paketen, denn
 es könnte sein, dass es einige Besonderheiten zu diesen Paketen gibt die
 beachtet werden sollten. 
 
-Um die nun vorbereiteten Pakete zu installieren kann wie gewohnt pacman zum
+Um die nun vorbereiteten Pakete zu installieren, kann wie gewohnt pacman zum
 Einsatz kommen. Diesen muss man jedoch speziell anweisen lokale Pakete zu
 isntallieren und zwar in der Form \verb!pacman -U /pfad/zum/foo.pkg.tar.gz!.
 
-Pakete die auf diese Weise installiert wurden registriert der pacman speziell.
-Diese können mittels \verb!pacman -Qm! aufgelistet werden.
+Pakete die auf diese Weise installiert wurden, werden von pacman speziell 
+registriert. Diese können mittels \verb!pacman -Qm! aufgelistet werden.
 
 \subsection{Kompilation}
 Die Kompilation erfolgt wie bei Ubuntu. \\

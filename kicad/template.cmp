@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by CvPcb (2013-feb-26)-stable date = Sam 30 Mär 2013 14:59:21 CET
+
+BeginCmp
+TimeStamp = /5156F003;
+Reference = BT1;
+ValeurCmp = BATTERY;
+IdModule  = SM2010;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156ED33;
+Reference = C1;
+ValeurCmp = C;
+IdModule  = SM1210L;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156ED24;
+Reference = C2;
+ValeurCmp = C;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156EA74;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156EA81;
+Reference = C4;
+ValeurCmp = C;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E896;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBB0;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBBC;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DB52;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBA4;
+Reference = D5;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E7D1;
+Reference = IC1;
+ValeurCmp = ATTINY85-P;
+IdModule  = SO8N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E531;
+Reference = Q1;
+ValeurCmp = PNP;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBB6;
+Reference = Q2;
+ValeurCmp = NPN;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBC2;
+Reference = Q3;
+ValeurCmp = NPN;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DB7B;
+Reference = Q4;
+ValeurCmp = NPN;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156DBAA;
+Reference = Q5;
+ValeurCmp = NPN;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E882;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E8A6;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E604;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156E5BF;
+Reference = R4;
+ValeurCmp = R;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156EC98;
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH_SMALL;
+EndCmp
+
+BeginCmp
+TimeStamp = /5156EA65;
+Reference = X1;
+ValeurCmp = QUARTZCMS4;
+IdModule  = SM1206;
+EndCmp
+
+EndListe
