@@ -14,7 +14,7 @@
 %GNU General Public License for more details.
 %----------------------------------------
 
-\section{MSP430-Toolchain (unter Linux)}
+\section{MSP430-Toolchain auf Ubuntu}
 \subsection{Installation}
 Die Installation der MSP-430 Toolchain ist unter Ubuntu bereits in den 
 Paketquellen vorhanden (ab Oneric Ocelot aka 11.10)
@@ -90,7 +90,79 @@ Operatin System & GNU/Linux\\
 \end{tabular}
 \end{table}
 
-\section{MSP430-Toolchain (unter Windows)}
+\section{MSP430-Toolchain auf Arch-Linux}
+\subsection{Installation}
+Unter Arch-Linux werden die nötigen Pakete nicht abgeboten in den Quellen.
+Jedoch können die Pakete selber erstellt werden aus den AUR.
+
+\subsubsection{System für Pakete aus AUR vorbereiten}
+Um Pakete aus AUR zu erstellen und installieren muss zuerst das Paket
+\verb!base-devel! installiert werden. Falls noch nicht vorhanden muss auch
+makepkg installiert werden.
+
+\subsubsection{Pakete erstellen}
+Um die Toolchain vollständig zu installieren müssen die folgenden Pakete aus
+den AUR heruntergeladen werden:
+\begin{itemize}
+	\item binutils-msp430
+	\item gcc-msp430
+	\item gdb-msp430 (heisst in AUR msp430-gdb)
+	\item msp430-libc
+	\item msp430mcu
+	\item mspdebug
+\end{itemize}
+Nach dem man alle benötigten Pakete heruntergeladen hat, kann man die 
+jeweiligen Tarbälle etrahieren mit \verb!tar xzf foo.tar.gz! (wobei foo
+hier für den jeweiligen Paketnamen steht).
+
+Hat man dies an allen Tarbällen angewendet kann man in das jeweilige neu
+angelegte Verzeichnis der Pakete gehen und dort \verb!makepkg! ausführen.
+Noch besser ist es Abhängigkeiten automatisch zu lösen über pacman. Hierzu
+fügt man den Parameter \verb!-s! hinzu d.h. \verb!makepkg -s!.
+
+Nun sollte man Ausschau halten nach READMEs zu den jeweiligen Paketen, denn
+es könnte sein, dass es einige Besonderheiten zu diesen Paketen gibt die
+beachtet werden sollten. 
+
+Um die nun vorbereiteten Pakete zu installieren kann wie gewohnt pacman zum
+Einsatz kommen. Diesen muss man jedoch speziell anweisen lokale Pakete zu
+isntallieren und zwar in der Form \verb!pacman -U /pfad/zum/foo.pkg.tar.gz!.
+
+Pakete die auf diese Weise installiert wurden registriert der pacman speziell.
+Diese können mittels \verb!pacman -Qm! aufgelistet werden.
+
+\subsection{Kompilation}
+Die Kompilation erfolgt wie bei Ubuntu. \\
+
+\verb!msp430-gcc -mmcu=msp430g2553 -o myprog myprog.c!
+
+\subsection{Flash und Debug}
+Auf das Flash schreiben und Debuggen erfolgt wie bereits für Ubuntu erklärt
+ab.\\
+
+\verb!mspdebug rf2500!\\
+
+\verb!(mspdebug) prog myprog!\\
+
+\verb!(mspdebug) run!\\
+
+
+\subsection{Testing}
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l }
+Hardware        & Lenovo ThinkPad T430 \\
+Kernel-Name     & Linux \\
+Kernel-Release  & 3.8.4-1-arch \\
+Kernel-Version  & \#1 SMP PREEMPT Wed Mar 20 22:10:25 CET 2012 \\
+Machine         & x86\_64 \\
+Operatin System & GNU/Linux\\
+\end{tabular}
+\end{table}
+
+
+
+\section{MSP430-Toolchain auf Windows}
 \subsection{Installation}
 Diese Anleitung befasst sich nur mit mspgcc. Entwicklungsumgebungen wie Eclipse 
 werden nicht behandelt. 
