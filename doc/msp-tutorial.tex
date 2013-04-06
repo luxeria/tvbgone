@@ -1,0 +1,23 @@
+\section{Grundlagen der Programmierung}
+Um einen Mikrocontroller wie den MSP430G2553 zu programmieren, bedarf es
+einiger Vorkehrungen. Diese werden oft unter dem Begriff ``Init'' 
+verschleiert. Hierbei ist oft eine sogenannte Initialisierung der 
+Hardware gemeint. Dies betrifft im einfachsten Fall nur den Mikrocontroller.
+In dieser Initialisierung werden vielerlei Dinge definiert.
+
+\begin{comment}
+	Im folgenden wird eine solche Initialisierung vorgestellt samt C- 
+	und Header-File.
+
+	\subsection{Hardwareinitialisierung}
+	\lstinputlisting{../software/tutorial/button/hardware.c}
+	\lstinputlisting{../software/tutorial/button/hardware.h}
+\end{comment}
+
+\subsection{Beispielprogramme}
+
+\subsubsection{Interrupt auf GPIO}
+In diesem Beispiel wird gezeigt, wie man einen Interrupt durch einen
+GPIO\footnote{\emph{General Purpose Input/Output}} anlegt.
+
+\lstinputlisting{../software/tutorial/button/button.c}

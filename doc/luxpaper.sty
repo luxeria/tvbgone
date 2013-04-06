@@ -79,11 +79,11 @@
         %keywordstyle=\color{red}\bfseries, % Farbe von Schlüsselwörtern
         stringstyle=\color{blue}\bfseries, % Farbe von Strings
         frame=single,                       % Einrahmung (einfach)
-        tabsize=2,                          % Tab-Weite
+        tabsize=8,                          % Tab-Weite
         %rulecolor=\color{black!30},         % 
         title=\lstname,                     % Titel = Name vom Source
         escapeinside={\%*}{*)},             % 
-        breakatwhitespace=true,             % 
+        %breakatwhitespace=true,             % 
         framextopmargin=2pt,                % 
         framexbottommargin=2pt,             % 
         inputencoding=utf8,                 % encoding = utf8
@@ -96,6 +96,9 @@
                  {ö}{{\"o}}1 }
 %%%%% 
 \usepackage{printlen}
+
+%%%%% Absatzweise auskommentieren im Tex-File
+\usepackage{verbatim}
 
 %%%%% Lorem Ipsum, Blindtext
 \usepackage{lipsum}         % generiert Lorem Ipsum Text
