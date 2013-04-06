@@ -3,7 +3,12 @@ Um einen Mikrocontroller wie den MSP430G2553 zu programmieren, bedarf es
 einiger Vorkehrungen. Diese werden oft unter dem Begriff ``Init'' 
 verschleiert. Hierbei ist oft eine sogenannte Initialisierung der 
 Hardware gemeint. Dies betrifft im einfachsten Fall nur den Mikrocontroller.
-In dieser Initialisierung werden vielerlei Dinge definiert.
+In dieser Initialisierung werden vielerlei Dinge definiert und gerade Personen
+die mit der Architektur nicht vertraut sind, scheitern oft an genau dieser
+ersten aller Hürden der uC-Programmierung.
+
+Ein gutes Beispiel einer solchen Hardware-Initialisierung ist 
+auf \url{http://github.com/daniw/msp430helloworld} einzusehen.
 
 \begin{comment}
 	Im folgenden wird eine solche Initialisierung vorgestellt samt C- 
@@ -20,4 +25,4 @@ In dieser Initialisierung werden vielerlei Dinge definiert.
 In diesem Beispiel wird gezeigt, wie man einen Interrupt durch einen
 GPIO\footnote{\emph{General Purpose Input/Output}} anlegt.
 
-\lstinputlisting{../software/tutorial/button/button.c}
+\lstinputlisting[firstline=8, lastline=39]{../software/tutorial/button/button.c}

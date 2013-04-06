@@ -21,9 +21,7 @@ int main(void)
 	P1REN ^= BUTTON;
 
 	P1IE |= BUTTON;			/* Enable Interrupt */
-
 	P1IFG &= ~BUTTON;		/* Button IFG cleared */
-
 	__enable_interrupt();		/* enable all interrupts */
 	
 	while(1){
